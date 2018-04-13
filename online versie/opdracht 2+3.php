@@ -26,7 +26,7 @@ if(preg_match('/Firefox/i',$agent)) $br = 'Firefox';
 
 
 
-  $sql = "INSERT INTO ZUCC (browser, os)
+  $sql = "INSERT INTO zucc (browser, os)
   VALUES ('$br','$os')";
   
   if ($conn->query($sql) === TRUE) {
@@ -35,7 +35,7 @@ if(preg_match('/Firefox/i',$agent)) $br = 'Firefox';
       echo "Error: " . $sql . "<br>" . $conn->error;
   }
 
-  $sql2 = "SELECT browser, COUNT(browser) as count FROM ZUCC GROUP BY browser";
+  $sql2 = "SELECT browser, COUNT(browser) as count FROM zucc GROUP BY browser";
   $result = $conn->query($sql2);
 
 
